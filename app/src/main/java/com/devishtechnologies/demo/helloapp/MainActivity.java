@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sayHello(View view){
-        Toast.makeText(this,  "Jai Shree Ram", Toast.LENGTH_SHORT).show();
+        TextView tv=(TextView)findViewById(R.id.textName);
+        String textNameValue=tv.getText().toString();
+        Toast.makeText(this,  "Hello "+textNameValue, Toast.LENGTH_SHORT).show();
 
     }
 }
